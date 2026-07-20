@@ -60,11 +60,11 @@
 
         <div class="botoes">
 
-            <button type="button" onclick="window.location.href='index.html'">
+            <button type="button" onclick="window.location.href='index.php'">
                 🏠 Início
             </button>
 
-            <button type="button" onclick="window.location.href='cadastro.html'">
+            <button type="button" onclick="window.location.href='cadastro.php'">
                 ➕ Novo Cadastro
             </button>
 

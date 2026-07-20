@@ -83,7 +83,7 @@
                     🗑 Limpar
                 </button>
 
-                <button type="button" onclick="window.location.href='index.html'">
+                <button type="button" onclick="window.location.href='index.php'">
                     ⬅ Voltar
                 </button>
 

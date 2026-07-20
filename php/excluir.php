@@ -36,7 +36,7 @@ $stmt->bind_param("i", $id);
 
 if ($stmt->execute()) {
 
-    header("Location: ../pesquisar.html?msg=excluido");
+    header("Location: ../pesquisar.php?msg=excluido");
     exit;
 
 } else {

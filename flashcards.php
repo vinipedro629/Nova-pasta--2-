@@ -59,7 +59,7 @@
                 ➡ Próximo
             </button>
 
-            <button onclick="window.location.href='index.html'">
+            <button onclick="window.location.href='index.php'">
                 🏠 Início
             </button>
 

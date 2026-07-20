@@ -19,8 +19,8 @@
                 </p>
             </div>
             <div class="hero-acao">
-                <a class="botao-link" href="cadastro.html">Cadastrar</a>
-                <a class="botao-link botao-secundario" href="pesquisar.html">Pesquisar</a>
+                <a class="botao-link" href="cadastro.php">Cadastrar</a>
+                <a class="botao-link botao-secundario" href="pesquisar.php">Pesquisar</a>
             </div>
         </div>
 
@@ -34,22 +34,22 @@
                 <article class="card-feature">
                     <h3>Cadastro</h3>
                     <p>Adicione novas perguntas e respostas ao seu banco de estudos rapidamente.</p>
-                    <a href="cadastro.html">Ir para cadastro</a>
+                    <a href="cadastro.php">Ir para cadastro</a>
                 </article>
                 <article class="card-feature">
                     <h3>Pesquisa</h3>
                     <p>Encontre perguntas por texto, resposta ou categoria.</p>
-                    <a href="pesquisar.html">Ir para pesquisa</a>
+                    <a href="pesquisar.php">Ir para pesquisa</a>
                 </article>
                 <article class="card-feature">
                     <h3>Quiz</h3>
                     <p>Teste seu conhecimento com perguntas aleatórias do seu banco.</p>
-                    <a href="quiz.html">Ir para quiz</a>
+                    <a href="quiz.php">Ir para quiz</a>
                 </article>
                 <article class="card-feature">
                     <h3>Flashcards</h3>
                     <p>Revise com cartões interativos e melhore sua memorização.</p>
-                    <a href="flashcards.html">Ir para flashcards</a>
+                    <a href="flashcards.php">Ir para flashcards</a>
                 </article>
             </section>
         </div>

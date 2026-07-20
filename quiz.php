@@ -54,7 +54,7 @@
                 ➡ Próxima Pergunta
             </button>
 
-            <button type="button" onclick="window.location.href='index.html'">
+            <button type="button" onclick="window.location.href='index.php'">
                 🏠 Início
             </button>
 
