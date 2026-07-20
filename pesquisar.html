@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar | Meu Caderno de Estudos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>🔎 Pesquisar Perguntas</h1>
+
+            <p>Pesquise por uma pergunta, resposta ou categoria.</p>
+
+        </header>
+
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                id="buscar"
+                placeholder="Digite uma palavra para pesquisar...">
+
+            <button id="btnPesquisar">
+                🔍 Pesquisar
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div id="resultadoPesquisa">
+
+            <h2>Resultados</h2>
+
+            <div class="cardPergunta">
+
+                <h3>Pergunta</h3>
+
+                <p>Aqui aparecerá a pergunta encontrada.</p>
+
+                <h3>Resposta</h3>
+
+                <p>Aqui aparecerá a resposta.</p>
+
+                <span class="categoria">
+                    Categoria: Programação
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="botoes">
+
+            <button type="button" onclick="window.location.href='index.html'">
+                🏠 Início
+            </button>
+
+            <button type="button" onclick="window.location.href='cadastro.html'">
+                ➕ Novo Cadastro
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

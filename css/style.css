@@ -1,0 +1,376 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:34px;
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#666;
+    font-size:16px;
+}
+
+/* ===========================
+   CAMPOS
+=========================== */
+
+.campo{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+label{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 8px rgba(13,110,253,.3);
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.botoes{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.botao-link{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#0d6efd;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.botao-link:hover{
+    background:#0b5ed7;
+    transform:translateY(-2px);
+}
+
+.botao-secundario{
+    background:#6c757d;
+}
+
+.botao-secundario:hover{
+    background:#5a6268;
+}
+
+button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.hero-acao{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.painel-inicial{
+    display:grid;
+    gap:20px;
+}
+
+.card-resumo{
+    background:#eef4ff;
+    border:1px solid #cce0ff;
+    border-radius:15px;
+    padding:25px;
+}
+
+.cards-features{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(220px, 1fr));
+    gap:20px;
+}
+
+.card-feature{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:15px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.card-feature h3{
+    margin-bottom:12px;
+}
+
+.card-feature a{
+    color:#0d6efd;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.card-feature a:hover{
+    text-decoration:underline;
+}
+
+button:hover{
+    background:#0b5ed7;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   PESQUISA
+=========================== */
+
+.pesquisa{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.pesquisa input{
+    flex:1;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cardPergunta,
+.cardQuiz,
+.flashcard{
+    background:#fafafa;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:25px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.cardPergunta h3,
+.cardQuiz h2,
+.flashcard h2{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+.cardPergunta p,
+.cardQuiz p,
+.flashcard p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.btn-mostrar-resposta{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:10px 16px;
+    font-size:14px;
+    cursor:pointer;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.btn-mostrar-resposta:hover{
+    background:#0b5ed7;
+}
+
+.resposta-oculta{
+    background:#f8f9fa;
+    border:1px solid #dee2e6;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   FLASHCARD
+=========================== */
+
+.flashcard{
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    position:relative;
+}
+
+.flashcard:hover{
+    transform:scale(1.02);
+}
+
+.frente,
+.verso{
+    min-height:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.verso{
+    display:none;
+}
+
+.flashcard.virado .frente {
+    display:none;
+}
+
+.flashcard.virado .verso {
+    display:flex;
+}
+
+/* ===========================
+   CATEGORIA
+=========================== */
+
+.categoria{
+    display:inline-block;
+    background:#0d6efd;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* ===========================
+   RESPOSTA DO QUIZ
+=========================== */
+
+#respostaCorreta{
+    margin-top:25px;
+    background:#eef7ee;
+    border-left:5px solid #28a745;
+    padding:20px;
+    border-radius:8px;
+}
+
+/* ===========================
+   LINHA
+=========================== */
+
+hr{
+    border:none;
+    height:1px;
+    background:#ddd;
+    margin:30px 0;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        padding:25px;
+    }
+
+    header h1{
+        font-size:28px;
+    }
+
+    .pesquisa{
+        flex-direction:column;
+    }
+
+    .botoes{
+        flex-direction:column;
+    }
+
+    button{
+        width:100%;
+    }
+
+}

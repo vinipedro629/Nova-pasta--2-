@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Meu Caderno de Estudos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>🧠 Modo Quiz</h1>
+
+            <p>Tente responder antes de visualizar a resposta.</p>
+
+        </header>
+
+        <div class="cardQuiz">
+
+            <h2>Pergunta</h2>
+
+            <p id="perguntaQuiz">
+                Aqui aparecerá uma pergunta do banco de dados.
+            </p>
+
+        </div>
+
+        <div class="campo">
+
+            <label for="respostaUsuario">
+                Sua resposta
+            </label>
+
+            <textarea
+                id="respostaUsuario"
+                rows="6"
+                placeholder="Digite sua resposta aqui..."></textarea>
+
+        </div>
+
+        <div class="botoes">
+
+            <button type="button" id="btnMostrarResposta">
+                👀 Mostrar Resposta
+            </button>
+
+            <button type="button" id="btnProxima">
+                ➡ Próxima Pergunta
+            </button>
+
+            <button type="button" onclick="window.location.href='index.html'">
+                🏠 Início
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div id="respostaCorreta">
+
+            <h2>Resposta Correta</h2>
+
+            <p>
+                A resposta aparecerá aqui quando você clicar em
+                <strong>Mostrar Resposta</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="js/quiz.js"></script>
+
+</body>
+
+</html>
