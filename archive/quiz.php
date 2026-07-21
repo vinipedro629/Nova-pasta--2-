@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | Meu Caderno de Estudos</title>
+    <title>Quiz | Meu Caderno de Estudos (ARCHIVE)</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
         <header>
 
-            <h1>🧠 Modo Quiz</h1>
+            <h1>🧠 Modo Quiz (ARCHIVE)</h1>
 
             <p>Tente responder antes de visualizar a resposta.</p>
 
@@ -75,7 +75,7 @@
 
     </div>
 
-    <script src="js/quiz.js"></script>
+    <script src="../js/quiz.js"></script>
 
 </body>
 

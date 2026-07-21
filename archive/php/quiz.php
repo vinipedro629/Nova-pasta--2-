@@ -1,5 +1,6 @@
 <?php
 
+// Arquivo de backup: php/quiz.php (ARCHIVE)
 require_once "conectar.php";
 
 $sql = "SELECT pergunta, resposta FROM perguntas ORDER BY id DESC";
@@ -20,3 +21,5 @@ header('Content-Type: application/json; charset=utf-8');
 echo json_encode($perguntas, JSON_UNESCAPED_UNICODE);
 
 $conexao->close();
+
+?>

@@ -1,3 +1,4 @@
+// Arquivo de backup: js/quiz.js (ARCHIVE)
 // ===========================================
 // QUIZ - Meu Caderno de Estudos
 // ===========================================

@@ -1,3 +1,4 @@
+// Arquivo de backup: js/flashcards.js (ARCHIVE)
 // ===========================================
 // Flashcards - Meu Caderno de Estudos
 // ===========================================

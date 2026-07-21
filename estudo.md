@@ -111,52 +111,43 @@ Informática
 
 ---
 
-### Quiz
+### Quiz (arquivado)
 
-O sistema escolhe uma pergunta aleatória.
+O sistema de Quiz foi removido da interface principal e arquivado.
 
-Mostra apenas:
+Exemplo de uso (arquivado):
 
 ```
 O que é JavaScript?
 ```
 
-Você responde.
-
-Depois clica
+Você respondia e depois clicava em:
 
 ```
 Mostrar resposta
 ```
 
-A resposta aparece.
-
 ---
 
-### Flashcards
+### Flashcards (arquivado)
 
-Frente
+O sistema de Flashcards foi removido da interface principal e arquivado.
+
+Frente (arquivado):
 
 ```
 O que é PHP?
 ```
 
-Virar cartão
-
-Verso
+Verso (arquivado):
 
 ```
 PHP é uma linguagem de programação para servidor.
 ```
 
+Os arquivos de backup estão em `archive/` (`archive/js/`, `archive/php/`).
+
 ---
-
-### Estatísticas
-
-```
-Total de perguntas
-
-250
 
 Categorias
 
@@ -213,15 +204,15 @@ estudos/
 ├── index.html ✔️
 ├── cadastro.html ✔️
 ├── pesquisar.html ✔️
-├── quiz.html ✔️
-├── flashcards.html ✔️
+├── quiz.html (arquivado)
+├── flashcards.html (arquivado)
 │
 ├── css/
 │      style.css  ✅
 │
 ├── js/
 │      script.js ✅
-│      quiz.js ✅
+│      quiz.js (arquivado)
 │
 ├── php/
 │      conectar.php ✅

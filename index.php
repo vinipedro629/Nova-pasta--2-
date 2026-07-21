@@ -15,7 +15,7 @@
             <div>
                 <h1>📚 Meu Caderno de Estudos</h1>
                 <p class="subtitulo">
-                    Organize suas perguntas, revise com quiz e aprenda com flashcards.
+                    Organize suas perguntas — cadastre e pesquise rapidamente.
                 </p>
             </div>
             <div class="hero-acao">
@@ -27,7 +27,7 @@
         <div class="painel-inicial">
             <section class="card-resumo">
                 <h2>O que você pode fazer</h2>
-                <p>Use o seu caderno para salvar perguntas, buscar respostas antigas e treinar com o quiz ou flashcards.</p>
+                <p>Use o seu caderno para salvar perguntas e buscar respostas antigas.</p>
             </section>
 
             <section class="cards-features">
@@ -41,16 +41,7 @@
                     <p>Encontre perguntas por texto, resposta ou categoria.</p>
                     <a href="pesquisar.php">Ir para pesquisa</a>
                 </article>
-                <article class="card-feature">
-                    <h3>Quiz</h3>
-                    <p>Teste seu conhecimento com perguntas aleatórias do seu banco.</p>
-                    <a href="quiz.php">Ir para quiz</a>
-                </article>
-                <article class="card-feature">
-                    <h3>Flashcards</h3>
-                    <p>Revise com cartões interativos e melhore sua memorização.</p>
-                    <a href="flashcards.php">Ir para flashcards</a>
-                </article>
+                <!-- Quiz e Flashcards removidos: mantidos em archive/ para rollback -->
             </section>
         </div>
 
