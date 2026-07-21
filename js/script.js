@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (categoria === "") {
-                alert("Selecione uma categoria.");
+                alert("Digite uma categoria.");
                 return;
             }
 

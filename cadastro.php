@@ -53,23 +53,12 @@
 
                 <label for="categoria">Categoria</label>
 
-                <select id="categoria" name="categoria">
-
-                    <option value="">Selecione</option>
-
-                    <option>Programação</option>
-
-                    <option>Português</option>
-
-                    <option>Matemática</option>
-
-                    <option>Direito</option>
-
-                    <option>Informática</option>
-
-                    <option>Outros</option>
-
-                </select>
+                <input
+                    type="text"
+                    id="categoria"
+                    name="categoria"
+                    placeholder="Digite a categoria..."
+                    required>
 
             </div>
 
