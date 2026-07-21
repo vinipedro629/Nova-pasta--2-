@@ -1,0 +1,24 @@
+[2026-07-21 04:19:21] salvar.php called, method=POST
+[2026-07-21 04:19:21] Pergunta inserida: test
+[2026-07-21 04:19:21] Progresso atualizado: +10 XP
+[2026-07-21 04:19:21] Progresso recalculado: xp=20 nivel=1
+[2026-07-21 04:21:16] salvar.php called, method=POST
+[2026-07-21 04:21:16] Pergunta inserida: teste2
+[2026-07-21 04:21:16] Progresso atualizado: +10 XP
+[2026-07-21 04:21:16] Progresso recalculado: xp=30 nivel=1
+[2026-07-21 04:24:17] salvar.php called, method=POST
+[2026-07-21 04:24:17] Pergunta inserida: teste
+[2026-07-21 04:24:17] Progresso atualizado: +10 XP
+[2026-07-21 04:24:17] Progresso recalculado: xp=40 nivel=1
+[2026-07-21 04:24:45] salvar.php called, method=POST
+[2026-07-21 04:24:45] Pergunta inserida: testeeeeeee
+[2026-07-21 04:24:45] Progresso atualizado: +10 XP
+[2026-07-21 04:24:45] Progresso recalculado: xp=50 nivel=1
+[2026-07-21 04:28:13] salvar.php called, method=POST
+[2026-07-21 04:28:13] Pergunta inserida: teste
+[2026-07-21 04:28:13] Progresso atualizado: +10 XP
+[2026-07-21 04:28:13] Progresso recalculado: xp=10 nivel=1
+[2026-07-21 04:36:54] salvar.php called, method=POST
+[2026-07-21 04:36:54] Pergunta inserida: teste
+[2026-07-21 04:36:54] Progresso atualizado: +10 XP
+[2026-07-21 04:36:54] Progresso recalculado: xp=20 nivel=1
