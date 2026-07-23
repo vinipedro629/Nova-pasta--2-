@@ -1,8 +1,8 @@
-﻿<?php
+<?php
 $pageTitle = 'Pesquisar | Meu Caderno de Estudos';
 $bodyClass = '';
 require_once __DIR__ . '/php/pesquisar-controller.php';
-
+$extraScripts = '';
 include __DIR__ . '/includes/header.php';
 ?>
 
