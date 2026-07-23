@@ -39,6 +39,7 @@ if ($resultado->num_rows == 0) {
 
     while ($linha = $resultado->fetch_assoc()) {
 
+        $id = intval($linha['id']);
         $pergunta = htmlspecialchars($linha['pergunta'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
         $resposta = strip_tags($linha['resposta'], '<b><strong><i><em><u><ul><ol><li><p><br><h1><h2><h3><h4><h5><h6><a><table><thead><tbody><tr><td><th>');
         $categoria = htmlspecialchars($linha['categoria'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
@@ -56,6 +57,11 @@ if ($resultado->num_rows == 0) {
             <div class='resposta-oculta' style='display:none;'>
                 <h2>Resposta</h2>
                 <div class='resposta-conteudo'>{$resposta}</div>
+            </div>
+
+            <div class='card-acoes'>
+                <a class='btn-editar' href='cadastro.php?id={$id}'>Editar</a>
+                <a class='btn-excluir' href='php/excluir.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir esta pergunta?');\">Excluir</a>
             </div>
 
             <span class='categoria'>
