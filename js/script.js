@@ -60,35 +60,84 @@ document.addEventListener("DOMContentLoaded", () => {
     // CADASTRO
     // ============================
     if (formulario) {
+        const clearFieldErrors = () => {
+            ['pergunta', 'resposta', 'categoria'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.remove('input-error');
+                const ferr = document.getElementById('error-' + id);
+                if (ferr) ferr.textContent = '';
+            });
+        };
+
+        const showFieldError = (id, msg) => {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('input-error');
+            let ferr = document.getElementById('error-' + id);
+            if (!ferr) {
+                ferr = document.createElement('div');
+                ferr.id = 'error-' + id;
+                ferr.className = 'field-error';
+                el && el.parentNode && el.parentNode.appendChild(ferr);
+            }
+            ferr.textContent = msg;
+        };
+
+        const showToast = (msg, type = 'success') => {
+            const t = document.createElement('div');
+            t.className = 'app-toast ' + (type === 'error' ? 'error' : 'success');
+            t.textContent = msg;
+            document.body.appendChild(t);
+            setTimeout(() => { t.style.opacity = '1'; }, 50);
+            setTimeout(() => { t.style.opacity = '0'; setTimeout(()=>t.remove(), 420); }, 2600);
+        };
+
         formulario.addEventListener("submit", async function (e) {
             e.preventDefault();
-            const pergunta = document.getElementById("pergunta").value.trim();
-            const categoria = document.getElementById("categoria").value.trim();
-            let resposta = '';
+            clearFieldErrors();
+            const perguntaEl = document.getElementById("pergunta");
+            const categoriaEl = document.getElementById("categoria");
+            const pergunta = perguntaEl ? perguntaEl.value.trim() : '';
+            const categoria = categoriaEl ? categoriaEl.value.trim() : '';
+            let respostaText = '';
             if (quillEditor) {
-                resposta = quillEditor.getText().trim();
+                respostaText = quillEditor.getText().trim();
                 respostaTextarea.value = quillEditor.root.innerHTML;
             } else {
-                resposta = document.getElementById("resposta").value.trim();
+                respostaText = document.getElementById("resposta").value.trim();
             }
-            if (!pergunta || !resposta || !categoria) {
-                alert('Preencha todos os campos.');
+
+            let hasError = false;
+            if (!pergunta) { showFieldError('pergunta', 'A pergunta é obrigatória.'); hasError = true; }
+            if (!respostaText) { showFieldError('resposta', 'A resposta não pode ficar vazia.'); hasError = true; }
+            if (!categoria) { showFieldError('categoria', 'A categoria é obrigatória.'); hasError = true; }
+            if (hasError) {
+                const firstErr = document.querySelector('.input-error');
+                if (firstErr) firstErr.focus();
+                showToast('Corrija os erros antes de enviar.', 'error');
                 return;
             }
+
+            // disable submit
+            const submitBtn = formulario.querySelector('button[type="submit"]');
+            const prevText = submitBtn ? submitBtn.textContent : null;
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Salvando...'; }
+
             const formData = new FormData(formulario);
             try {
                 const response = await fetch(formulario.action, { method: formulario.method || 'POST', body: formData });
                 const text = await response.text();
                 if (response.ok) {
-                    alert(text.trim() || 'Pergunta cadastrada com sucesso!');
+                    showToast(text.trim() || 'Pergunta cadastrada com sucesso!', 'success');
                     formulario.reset();
                     try { window.__enviarAcaoProgresso && window.__enviarAcaoProgresso('cadastro'); } catch(e){}
+                    setTimeout(() => { window.location.href = 'index.php'; }, 900);
                 } else {
-                    alert('Erro ao salvar: ' + text.trim());
+                    showToast('Erro ao salvar: ' + text.trim(), 'error');
+                    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
                 }
-                setTimeout(() => { window.location.href = 'index.php'; }, 600);
             } catch (err) {
-                alert('Erro de conexão: ' + err.message);
+                showToast('Erro de conexão: ' + err.message, 'error');
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
             }
         });
     }
