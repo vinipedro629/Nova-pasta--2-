@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("formPergunta");
     const btnPesquisar = document.getElementById("btnPesquisar");
     const resultado = document.getElementById("resultadoPesquisa");
+    const respostaTextarea = document.getElementById("resposta");
+    const quillEditor = window.quillEditor || null;
 
     const nivelEl = document.getElementById('nivel');
     const xpEl = document.getElementById('xp');
@@ -61,14 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
         formulario.addEventListener("submit", async function (e) {
             e.preventDefault();
             const pergunta = document.getElementById("pergunta").value.trim();
-            const resposta = document.getElementById("resposta").value.trim();
             const categoria = document.getElementById("categoria").value.trim();
+            let resposta = '';
+            if (quillEditor) {
+                resposta = quillEditor.getText().trim();
+                respostaTextarea.value = quillEditor.root.innerHTML;
+            } else {
+                resposta = document.getElementById("resposta").value.trim();
+            }
             if (!pergunta || !resposta || !categoria) {
                 alert('Preencha todos os campos.');
                 return;
-            }
-            if (window.tinymce) {
-                tinymce.triggerSave();
             }
             const formData = new FormData(formulario);
             try {

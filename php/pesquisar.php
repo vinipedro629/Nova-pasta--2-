@@ -55,7 +55,7 @@ if ($resultado->num_rows == 0) {
 
             <div class='resposta-oculta' style='display:none;'>
                 <h2>Resposta</h2>
-                <p>{$resposta}</p>
+                <div class='resposta-conteudo'>{$resposta}</div>
             </div>
 
             <span class='categoria'>

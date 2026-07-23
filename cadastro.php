@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Pergunta | Meu Caderno de Estudos</title>
 
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -40,12 +41,8 @@
 
                 <label for="resposta">Resposta</label>
 
-                <textarea
-                    id="resposta"
-                    name="resposta"
-                    rows="8"
-                    placeholder="Digite a resposta..."
-                    required></textarea>
+                <div id="editor" class="editor"></div>
+                <textarea id="resposta" name="resposta" hidden></textarea>
 
             </div>
 
@@ -82,16 +79,17 @@
 
     </div>
 
-    <script src="https://cdn.tiny.cloud/1/4fhqogrwifkjirqea2qpnlyed5zulzivoyx9x87dsy7nuukj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script>
-        tinymce.init({
-            selector: '#resposta',
-            height: 320,
-            menubar: false,
-            plugins: 'lists link',
-            toolbar: 'undo redo | bold italic underline | bullist numlist | link',
-            branding: false,
-            content_style: 'body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; }'
+        window.quillEditor = new Quill('#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    ['bold', 'italic', 'underline'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    ['link']
+                ]
+            }
         });
     </script>
     <script src="js/script.js"></script>
