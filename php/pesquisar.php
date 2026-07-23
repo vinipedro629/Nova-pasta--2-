@@ -40,7 +40,7 @@ if ($resultado->num_rows == 0) {
     while ($linha = $resultado->fetch_assoc()) {
 
         $pergunta = htmlspecialchars($linha['pergunta'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-        $resposta = htmlspecialchars($linha['resposta'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $resposta = strip_tags($linha['resposta'], '<b><strong><i><em><u><ul><ol><li><p><br><h1><h2><h3><h4><h5><h6><a><table><thead><tbody><tr><td><th>');
         $categoria = htmlspecialchars($linha['categoria'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
         echo "

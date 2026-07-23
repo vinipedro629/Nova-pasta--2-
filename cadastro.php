@@ -82,6 +82,18 @@
 
     </div>
 
+    <script src="https://cdn.tiny.cloud/1/4fhqogrwifkjirqea2qpnlyed5zulzivoyx9x87dsy7nuukj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#resposta',
+            height: 320,
+            menubar: false,
+            plugins: 'lists link',
+            toolbar: 'undo redo | bold italic underline | bullist numlist | link',
+            branding: false,
+            content_style: 'body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; }'
+        });
+    </script>
     <script src="js/script.js"></script>
 
 </body>

@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert('Preencha todos os campos.');
                 return;
             }
+            if (window.tinymce) {
+                tinymce.triggerSave();
+            }
             const formData = new FormData(formulario);
             try {
                 const response = await fetch(formulario.action, { method: formulario.method || 'POST', body: formData });

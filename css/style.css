@@ -154,6 +154,43 @@ textarea{
     resize:vertical;
 }
 
+.textarea-negrito{
+    font-weight:bold !important;
+}
+
+textarea.textarea-negrito,
+textarea.textarea-negrito:focus{
+    font-weight:bold !important;
+    color:#111;
+}
+
+.formatacao{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:8px;
+}
+
+.botao-formatacao{
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    background:#0d6efd;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.botao-formatacao.ativo{
+    background:#0b5ed7;
+    box-shadow:0 0 0 3px rgba(13,110,253,.18);
+}
+
+.botao-formatacao:hover{
+    background:#0b5ed7;
+}
+
 /* ===========================
    BOTÕES
 =========================== */
